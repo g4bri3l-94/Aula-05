@@ -1,0 +1,156 @@
+'''
+Aquecimento 01
+
+Determinada empresa resolveu dar um aumento a todos seus funcionários seguindo a seguinte tabela:
+- Salários até R$1.000,00 – ajuste de 15%
+- Salários até R$3.000,00 – ajuste de 10%
+- Salários acima de R$3.000,00 – ajuste de 5%
+
+Crie um algoritmo que solicite o salário e, em seguida, informe o valor reajustado.
+
+valor=float(input('Digite o valor do salario: '))
+v01=valor*0.15
+v02=valor*0.10
+v03=valor*0.05
+if valor<=1000:
+    print(f'O valor do reajuste é de: {valor+v01}')
+elif valor<=1000 or valor>=3000:
+    print(f'O valor do reajuste é de: {valor+v02}')
+else:
+    print(f'O valor do reajuste é de: {valor+v03}')
+'''
+
+'''
+Aquecimento 02
+
+Escreva um algoritmo que solicite ao usuário a entrada de 10 idades e mostre na tela a classificação da população seguindo os critérios:
+média até 18 anos – População jovem
+média entre 18 e 58 anos – População adulta
+média acima de 58 anos – População idosa
+
+
+soma=0
+
+for i in range(0,10):
+    idade=int(input('Digite uma idade: '))
+    soma=soma+idade
+
+media=soma/10
+
+if media<18:
+    print('População jovem.')
+elif media<=18 and media>=58:
+    print('População adulta.')
+else:
+    print('População idosa.')
+'''
+
+'''
+01) Escreva uma função que receba um número inteiro como parâmetro e informe se ele é positivo, negativo ou nulo.
+
+def verificaPositivo(num):
+    if num > 0:
+        print('Positivo')
+    elif num < 0:
+        print('Negativo')
+    else:
+        print('Nulo')
+numero=int(input('Digite um número: '))
+verificaPositivo(numero)
+
+ou então:
+
+def verificaPositivo():
+    num = int(input('Informe um número: '))
+    if num > 0:
+        print('Positivo')
+    elif num < 0:
+        print('Negativo')
+    else:
+        print('Nulo')
+
+verificaPositivo()
+'''
+
+'''
+02) Escreva uma função que receba um nome como parâmetro e informe quantas vogais existem nele.
+
+def contaVogais(nome):
+    contV=0
+    for letra in nome:
+        if letra.lower() in 'aeiou':
+            contV+=1
+    print(contV)
+nome=input('Informe seu nome: ')
+contaVogais(nome)
+'''
+
+
+'''
+03) Crie uma função que receba dois números como parâmetros, verifique e retorne a quantidade (0, 1 ou 2) de números pares.
+
+def verificaPares(num1, num2):
+    qtdP = 0
+    if num1 % 2 == 0:
+        qtdP += 1
+    if num2 % 2 == 0:
+        qtdP += 1
+    return qtdP
+
+num1 = int(input('Digite um número: '))
+num2 = int(input('Digite outro número: '))
+
+contador = verificaPares(num1,num2)
+print(f'você digitou {contador} números pares')
+'''
+
+
+'''
+04) Escreva uma função que receba dois parâmetros, sendo o primeiro um número inteiro e o segundo uma porcentagem, depois calcule e retorne o valor do número somado ao aumento percentual informado.
+
+def salario(n01, n02):
+    resultado=n01*(1+(n02/100))
+    return resultado
+
+sal=float(input('Informe seu salario: '))
+porc=float(input('Informe a porcentagem: '))
+total=salario(sal, porc)
+print(total)
+'''
+
+'''
+05) Crie duas funções, uma que irá SOLICITAR, verificar e retornar qual o maior dentre dois números pares informado, outra que fará a mesma coisa para dois números ímpares. Em seguida, some os dois retornos e apresente o valor do resultado.
+
+def verificaPar():
+    n01=int(input('Digite um numero: '))
+    n02=int(input('Digite um numero: '))
+    if n01>n02:
+        return n01
+    else:
+        return n02
+def verificaImpar():
+    n01=int(input('Digite um numero: '))
+    n02=int(input('Digite um numero: '))
+    if n01>n02:
+        return n01
+    else:
+        return n02
+
+par=verificaPar()
+impar=verificaImpar()
+soma=par+impar
+print(f'A soma entre {par} e {impar} é: {soma}')
+'''
+
+'''
+def mensagem(nome, msg='Saudações, '):
+    print(f'{msg}{nome}')
+nome=input('Qual seu nome? ')
+mensagem(nome)
+'''
+'''
+def mensagem(nome, msg='Boa aula, '):
+    print(f'{msg}{nome}')
+nome=input('Qual seu nome? ')
+mensagem(nome)
+'''
