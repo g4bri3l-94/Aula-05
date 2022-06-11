@@ -12,3 +12,39 @@ soma = somar_inteiros(n)
 
 print(f'A soma dos números inteiros positivos iguais ou menor que '
       f'{n} é {soma}')
+
+07) Escreva uma função que pode receber três parâmetros (dois números e uma operação), calcule e retorne o valor do resultado. Caso não seja passado o terceiro parâmetro (a operação), assuma como valor padrão a soma.
+
+
+def operacao(num1, num2, oper='+'):
+    if oper == '+':
+        return num1+num2
+    elif oper =='-':
+        return num1-num2
+    elif oper =='*':
+        return num1*num2
+    elif oper == '/':
+        return num1/num2
+    else:
+        print('Operção inválida')
+
+num1 = int(input('Informe o primeiro número: '))
+num2 = int(input('Informe o segundo número: '))
+oper = input('Informe a operação que deseja realizar (+ - * /) ')
+
+resultado = operacao(num1, num2)
+print(resultado)
+'''
+
+'''
+08) Faça uma função que informe a quantidade de caracteres de uma frase informada por parâmetro.
+'''
+
+def conta(frase):
+    frase1 = frase.replace(' ','')
+    qtd = len(frase1)
+    return qtd
+
+frase = 'A aula acabou bora sextar'
+qtd = conta(frase)
+print(qtd)
