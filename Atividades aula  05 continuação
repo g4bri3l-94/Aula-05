@@ -1,0 +1,14 @@
+Desafio) Escreva uma função que recebe como entrada um número inteiro positivo n e retorne a soma de todos os inteiros positivos menores ou iguais a n.
+
+
+def somar_inteiros(n):
+    soma = 0
+    for numero in range(1, n+1):
+        soma += numero
+    return soma
+
+n = int(input("Digite um número inteiro positivo: "))
+soma = somar_inteiros(n)
+
+print(f'A soma dos números inteiros positivos iguais ou menor que '
+      f'{n} é {soma}')
